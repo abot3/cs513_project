@@ -1,0 +1,1244 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "date",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column date using expression value.toDate()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "page_count",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column page_count using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "dish_count",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column dish_count using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "id",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column id using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "venue",
+    "expression": "grel:strip(replace(value, /[^a-zA-Z 0-9_]/, \" \"))",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column venue using expression grel:strip(replace(value, /[^a-zA-Z 0-9_]/, \" \"))"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "event",
+    "expression": "grel:strip(replace(value, /[^a-zA-Z 0-9_]/, \" \"))",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column event using expression grel:strip(replace(value, /[^a-zA-Z 0-9_]/, \" \"))"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "sponsor",
+    "expression": "grel:strip(replace(value, /[^a-zA-Z 0-9_]/, \" \"))",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column sponsor using expression grel:strip(replace(value, /[^a-zA-Z 0-9_]/, \" \"))"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location",
+    "expression": "grel:strip(replace(value, /[^a-zA-Z 0-9_]/, \" \"))",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column location using expression grel:strip(replace(value, /[^a-zA-Z 0-9_]/, \" \"))"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "occasion",
+    "expression": "grel:strip(replace(value, /[^a-zA-Z 0-9_]/, \" \"))",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column occasion using expression grel:strip(replace(value, /[^a-zA-Z 0-9_]/, \" \"))"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "sponsor",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column sponsor using expression value.toLowercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "event",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column event using expression value.toLowercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "venue",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column venue using expression value.toLowercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "occasion",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column occasion using expression value.toLowercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location",
+    "expression": "grel:strip(replace(value, /[^a-zA-Z 0-9_]/, \" \"))",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column location using expression grel:strip(replace(value, /[^a-zA-Z 0-9_]/, \" \"))"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column location using expression value.toLowercase()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "venue",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "pol  soc",
+          "soc  pol",
+          "soc pol"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "political"
+      },
+      {
+        "from": [
+          "com soc",
+          "soc  com",
+          "soc com"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "social"
+      },
+      {
+        "from": [
+          "soc  relig",
+          "soc relig"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "religious"
+      },
+      {
+        "from": [
+          "other  club",
+          "other club"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "club"
+      },
+      {
+        "from": [
+          "social club",
+          "social  club"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "social"
+      },
+      {
+        "from": [
+          "foreign hotel",
+          "foreign  hotel"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "hotel"
+      },
+      {
+        "from": [
+          "other  private",
+          "other private"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "private"
+      },
+      {
+        "from": [
+          "soc  mil",
+          "soc mil"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "military"
+      },
+      {
+        "from": [
+          "other  private party  single host",
+          "other  single host private party"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "private"
+      },
+      {
+        "from": [
+          "other  personal",
+          "other personal"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "private"
+      }
+    ],
+    "description": "Mass edit cells in column venue"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "venue",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "govt",
+          "gov t"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "government"
+      }
+    ],
+    "description": "Mass edit cells in column venue"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "venue",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "other  private hosts",
+          "other  private host",
+          "other  private hostess"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "private"
+      },
+      {
+        "from": [
+          "commercial",
+          "cmmercial",
+          "commercoa"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "commercial"
+      },
+      {
+        "from": [
+          "other  individual",
+          "pther  individual"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "private"
+      },
+      {
+        "from": [
+          "commercial",
+          "commercoa"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "commercial"
+      },
+      {
+        "from": [
+          "other  private party",
+          "other  private paty"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "private"
+      },
+      {
+        "from": [
+          "commercial",
+          "cmmercial"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "commercial"
+      },
+      {
+        "from": [
+          "other  soc",
+          "other  sport"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "social"
+      }
+    ],
+    "description": "Mass edit cells in column venue"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "venue",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "military",
+          "milit"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "military"
+      },
+      {
+        "from": [
+          "prof  com",
+          "prof soc"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "social"
+      }
+    ],
+    "description": "Mass edit cells in column venue"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "venue",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "other  privately hosted dinner party",
+          "other  privately hosted party",
+          "other  private party by single host",
+          "other  privately hosted banquet",
+          "other  privately hosted dinner",
+          "other  privately hosted luncheon"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "private"
+      },
+      {
+        "from": [
+          "other  privately hosted dinner party",
+          "other  privately hosted party",
+          "other  privately hosted banquet",
+          "other  privately hosted dinner",
+          "other  privately hosted luncheon"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "private"
+      },
+      {
+        "from": [
+          "other  royal king",
+          "other  royal",
+          "other  royal figure",
+          "other  royal host",
+          "other  royal monarch"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "royal"
+      },
+      {
+        "from": [
+          "other  privately hosted dinner party",
+          "other  privately hosted party",
+          "other  privately hosted banquet",
+          "other  privately hosted dinner"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "private"
+      },
+      {
+        "from": [
+          "other  royal king",
+          "other  royal",
+          "other  royal figure",
+          "other  royal host"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "royal"
+      },
+      {
+        "from": [
+          "other  privately hosted party",
+          "other  privately hosted banquet",
+          "other  privately hosted dinner",
+          "other  privately hosted luncheon"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "private"
+      },
+      {
+        "from": [
+          "other  individually hosted party",
+          "other  private individual host",
+          "other  private party with individual host",
+          "other private individual"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "private"
+      },
+      {
+        "from": [
+          "other  private individual host",
+          "other  private party with individual host",
+          "other private individual"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "private"
+      },
+      {
+        "from": [
+          "restaurant",
+          "foreign restaurant",
+          "foreign hotel restaurant"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "restaurant"
+      },
+      {
+        "from": [
+          "other  royal",
+          "other  royal host",
+          "other  royal monarch"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "royal"
+      },
+      {
+        "from": [
+          "restaurant",
+          "hotel restaurant",
+          "foreign hotel restaurant"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "restaurant"
+      },
+      {
+        "from": [
+          "hotel restaurant",
+          "foreign restaurant",
+          "foreign hotel restaurant"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "restaurant"
+      },
+      {
+        "from": [
+          "restaurant",
+          "hotel restaurant",
+          "foreign restaurant"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "restaurant"
+      },
+      {
+        "from": [
+          "other  group of friends",
+          "other  private friends",
+          "other  private group of friends"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "private"
+      },
+      {
+        "from": [
+          "other  private club",
+          "other  private friends",
+          "other  private group of friends"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "private"
+      },
+      {
+        "from": [
+          "other  private club",
+          "other  private friends"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "private"
+      },
+      {
+        "from": [
+          "hotel restaurant",
+          "foreign hotel restaurant"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "restaurant"
+      },
+      {
+        "from": [
+          "private",
+          "private party"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "private"
+      },
+      {
+        "from": [
+          "foreign",
+          "foreigneign"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "private"
+      },
+      {
+        "from": [
+          "foreign restaurant",
+          "foreign hotel restaurant"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "restaurant"
+      },
+      {
+        "from": [
+          "other   presumably british royal family",
+          "other  british royal family"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "royal"
+      },
+      {
+        "from": [
+          "other  individually hosted party",
+          "other  private party with individual host"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "private"
+      },
+      {
+        "from": [
+          "other  privately hosted party",
+          "other  private party by single host"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "private"
+      },
+      {
+        "from": [
+          "other  private friends",
+          "other  private group of friends"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "private"
+      },
+      {
+        "from": [
+          "other  group of friends",
+          "other  private group of friends"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "private"
+      }
+    ],
+    "description": "Mass edit cells in column venue"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "venue",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "com",
+          "comm",
+          "som",
+          "dom"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "commercial"
+      },
+      {
+        "from": [
+          "com",
+          "comm",
+          "conn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "commercial"
+      },
+      {
+        "from": [
+          "prof",
+          "pro",
+          "prog"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "professional"
+      },
+      {
+        "from": [
+          "nav",
+          "naval",
+          "nac"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "naval"
+      },
+      {
+        "from": [
+          "private",
+          "pricate"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "private"
+      },
+      {
+        "from": [
+          "nav",
+          "nac"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "naval"
+      },
+      {
+        "from": [
+          "patr",
+          "pat"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "patr"
+      },
+      {
+        "from": [
+          "educ",
+          "edus"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "edu"
+      },
+      {
+        "from": [
+          "pol",
+          "polit"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "political"
+      },
+      {
+        "from": [
+          "relig",
+          "rel"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "religious"
+      },
+      {
+        "from": [
+          "soc",
+          "som"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "social"
+      },
+      {
+        "from": [
+          "nav",
+          "naval"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "naval"
+      }
+    ],
+    "description": "Mass edit cells in column venue"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "venue",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "social",
+          "soc gk"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "social"
+      }
+    ],
+    "description": "Mass edit cells in column venue"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "venue",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "hotel",
+          "hotel  for"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "hotel"
+      },
+      {
+        "from": [
+          "other",
+          "other theater"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "other"
+      }
+    ],
+    "description": "Mass edit cells in column venue"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "venue",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "other  london club",
+          "other  single tax club",
+          "other  sporting club"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "club"
+      },
+      {
+        "from": [
+          "other",
+          "other  museum",
+          "other  music society"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "other"
+      },
+      {
+        "from": [
+          "other  london club",
+          "other  sporting club"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "club"
+      },
+      {
+        "from": [
+          "railroad",
+          "foreign railroad"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "railroad"
+      },
+      {
+        "from": [
+          "other",
+          "other  museum"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "other"
+      },
+      {
+        "from": [
+          "restaurant",
+          "restaurant other urant other bar"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "restaurant"
+      },
+      {
+        "from": [
+          "patr",
+          "patriotic"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "patriotic"
+      },
+      {
+        "from": [
+          "other  literary assoc",
+          "other  trade association"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "association"
+      },
+      {
+        "from": [
+          "other  single tax club",
+          "other  sporting club"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "club"
+      }
+    ],
+    "description": "Mass edit cells in column venue"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "venue",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "mil",
+          "military"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "military"
+      },
+      {
+        "from": [
+          "restaurant",
+          "resort"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "restaurant"
+      },
+      {
+        "from": [
+          "social",
+          "association"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "social"
+      }
+    ],
+    "description": "Mass edit cells in column venue"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "event",
+    "expression": "grel:if(contains(value, \"dinner\"), \"dinner\", \n  if(contains(value, \"lunch\"), \"lunch\", \n    if(contains(value, \"breakfast\"), \"breakfast\",\n      if(contains(value, \"banquet\"), \"banquet\", value))\n    )\n  )\n)",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column event using expression grel:if(contains(value, \"dinner\"), \"dinner\", \n  if(contains(value, \"lunch\"), \"lunch\", \n    if(contains(value, \"breakfast\"), \"breakfast\",\n      if(contains(value, \"banquet\"), \"banquet\", value))\n    )\n  )\n)"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "event",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "daily menu",
+          "daily  menu"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "daily menu"
+      },
+      {
+        "from": [
+          "daily menu  supper",
+          "daily menu supper"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "daily menu"
+      },
+      {
+        "from": [
+          "ladies night",
+          "ladies  night"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "drinks"
+      }
+    ],
+    "description": "Mass edit cells in column event"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "event",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "dinner",
+          "dinnner"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "dinner"
+      }
+    ],
+    "description": "Mass edit cells in column event"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "event",
+    "expression": "grel:if(contains(value, \"wedding\"), \"wedding\", \n  if(contains(value, \"anniversary\"), \"anniversary\", \n    if(contains(value, \"wine\"), \"wine\", value))\n  )\n)",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column event using expression grel:if(contains(value, \"wedding\"), \"wedding\", \n  if(contains(value, \"anniversary\"), \"anniversary\", \n    if(contains(value, \"wine\"), \"wine\", value))\n  )\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "event",
+    "expression": "grel:if(contains(value, \"annual\"), \"annual event\", \n  if(and(contains(value, \"menu\"), contains(value, \"daily\")), \"daily menu\", value)\n)",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column event using expression grel:if(contains(value, \"annual\"), \"annual event\", \n  if(and(contains(value, \"menu\"), contains(value, \"daily\")), \"daily menu\", value)\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "event",
+    "expression": "grel:if(contains(value, \"reunion\"), \"private\", \n  if(contains(value, \"meeting\"), \"private\", \n    if(contains(value, /^daily$/), \"daily menu\", value)\n  )\n)",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column event using expression grel:if(contains(value, \"reunion\"), \"private\", \n  if(contains(value, \"meeting\"), \"private\", \n    if(contains(value, /^daily$/), \"daily menu\", value)\n  )\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location",
+    "expression": "grel:if(contains(value, \"hotel\"), \"hotel\", \n  if(contains(value, \"restaurant\"), \"restaurant\", \n    if(contains(value, \"club\"), \"club\",\n      if(contains(value, \"waldorf astoria\"), \"hotel\", value))\n    )\n  )\n)",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column location using expression grel:if(contains(value, \"hotel\"), \"hotel\", \n  if(contains(value, \"restaurant\"), \"restaurant\", \n    if(contains(value, \"club\"), \"club\",\n      if(contains(value, \"waldorf astoria\"), \"hotel\", value))\n    )\n  )\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location",
+    "expression": "grel:if(or(contains(value, \"ship\"), contains(value, \"ocean\"), contains(value, \"line\")), \"ship\", \n  if(or(contains(value, \"rail\"), contains(value, \"pacific\")), \"rail\", \n    if(contains(value, \"the ambassador\"), \"hotel\",\n      if(contains(value, \"biltmore\"), \"hotel\", value))\n    )\n  )\n)",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column location using expression grel:if(or(contains(value, \"ship\"), contains(value, \"ocean\"), contains(value, \"line\")), \"ship\", \n  if(or(contains(value, \"rail\"), contains(value, \"pacific\")), \"rail\", \n    if(contains(value, \"the ambassador\"), \"hotel\",\n      if(contains(value, \"biltmore\"), \"hotel\", value))\n    )\n  )\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location",
+    "expression": "grel:if(contains(value, \"hamburg amerika linie\"), \"ship\", \n  if(contains(value, \"nippon yusen kaisha\"), \"ship\", \n    if(contains(value, \"toyo kisen kaisha\"), \"ship\", value)\n  )\n)",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column location using expression grel:if(contains(value, \"hamburg amerika linie\"), \"ship\", \n  if(contains(value, \"nippon yusen kaisha\"), \"ship\", \n    if(contains(value, \"toyo kisen kaisha\"), \"ship\", value)\n  )\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "sponsor",
+    "expression": "grel:if(contains(value, \"hotel\"), \"hotel\", \n  if(contains(value, \"restaurant\"), \"restaurant\", \n    if(contains(value, \"club\"), \"club\",\n      if(contains(value, \"waldorf astoria\"), \"hotel\", value))\n    )\n  )\n)",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column sponsor using expression grel:if(contains(value, \"hotel\"), \"hotel\", \n  if(contains(value, \"restaurant\"), \"restaurant\", \n    if(contains(value, \"club\"), \"club\",\n      if(contains(value, \"waldorf astoria\"), \"hotel\", value))\n    )\n  )\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "sponsor",
+    "expression": "grel:if(or(contains(value, \"ship\"), contains(value, \"ocean\"), contains(value, \"line\")), \"ship\", \n  if(or(contains(value, \"rail\"), contains(value, \"pacific\")), \"rail\", \n    if(contains(value, \"the ambassador\"), \"hotel\",\n      if(contains(value, \"biltmore\"), \"hotel\", value))\n    )\n  )\n)",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column sponsor using expression grel:if(or(contains(value, \"ship\"), contains(value, \"ocean\"), contains(value, \"line\")), \"ship\", \n  if(or(contains(value, \"rail\"), contains(value, \"pacific\")), \"rail\", \n    if(contains(value, \"the ambassador\"), \"hotel\",\n      if(contains(value, \"biltmore\"), \"hotel\", value))\n    )\n  )\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "sponsor",
+    "expression": "grel:if(contains(value, \"hamburg amerika linie\"), \"ship\", \n  if(contains(value, \"nippon yusen kaisha\"), \"ship\", \n    if(contains(value, \"toyo kisen kaisha\"), \"ship\", \n      if(contains(value, \"norddeutscher lloyd bremen\"), \"ship\", value))\n    )\n  )\n)",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column sponsor using expression grel:if(contains(value, \"hamburg amerika linie\"), \"ship\", \n  if(contains(value, \"nippon yusen kaisha\"), \"ship\", \n    if(contains(value, \"toyo kisen kaisha\"), \"ship\", \n      if(contains(value, \"norddeutscher lloyd bremen\"), \"ship\", value))\n    )\n  )\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "sponsor",
+    "expression": "grel:if(facetCount(value, \"value\", \"sponsor\") > 100, value, \"\")",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column sponsor using expression grel:if(facetCount(value, \"value\", \"sponsor\") > 100, value, \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "event",
+    "expression": "grel:if(facetCount(value, \"value\", \"event\") > 17, value, \"\")",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column event using expression grel:if(facetCount(value, \"value\", \"event\") > 17, value, \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "venue",
+    "expression": "grel:if(facetCount(value, \"value\", \"venue\") > 2, value, \"\")",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column venue using expression grel:if(facetCount(value, \"value\", \"venue\") > 2, value, \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location",
+    "expression": "grel:if(facetCount(value, \"value\", \"location\") > 400, value, \"\")",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column location using expression grel:if(facetCount(value, \"value\", \"location\") > 400, value, \"\")"
+  }
+]
