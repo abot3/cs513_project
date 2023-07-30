@@ -1240,5 +1240,83 @@
     "repeat": false,
     "repeatCount": 10,
     "description": "Text transform on cells in column location using expression grel:if(facetCount(value, \"value\", \"location\") > 400, value, \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location",
+    "expression": "grel:if(contains(value, \"hamburg amerika linie\"), \"ship\", \n  if(contains(value, \"nippon yusen kaisha\"), \"ship\", \n    if(contains(value, \"toyo kisen kaisha\"), \"ship\", \n      if(contains(value, \"norddeutscher lloyd bremen\"), \"ship\", value)\n    )\n  )\n)",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column location using expression grel:if(contains(value, \"hamburg amerika linie\"), \"ship\", \n  if(contains(value, \"nippon yusen kaisha\"), \"ship\", \n    if(contains(value, \"toyo kisen kaisha\"), \"ship\", \n      if(contains(value, \"norddeutscher lloyd bremen\"), \"ship\", value)\n    )\n  )\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "event",
+    "expression": "grel:if(contains(value, \"bill of fare\"), \"daily menu\", \n  if(contains(value, \"carte du jour\"), \"daily menu\", \n    if(contains(value, \"fruhstuck\"), \"breakfast\", \n      if(contains(value, \"tiffin\"), \"lunch\", \n        if(contains(value, \"mittagessen\"), \"lunch\", value)\n      )\n    )\n  )\n)",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column event using expression grel:if(contains(value, \"bill of fare\"), \"daily menu\", \n  if(contains(value, \"carte du jour\"), \"daily menu\", \n    if(contains(value, \"fruhstuck\"), \"breakfast\", \n      if(contains(value, \"tiffin\"), \"lunch\", \n        if(contains(value, \"mittagessen\"), \"lunch\", value)\n      )\n    )\n  )\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "event",
+    "expression": "grel:if(contains(value, /^menu$/), \"daily menu\", value)",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column event using expression grel:if(contains(value, /^menu$/), \"daily menu\", value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "venue",
+    "expression": "grel:if(contains(value, /^ss  for$/), \"\", \n  if(contains(value, \"greek letter  fraternity or sorority\"), \"\", \n    if(contains(value,  /^other$/), \"\", \n      if(contains(value, /^gov$/), \"government\", value)\n    )\n  )\n)",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column venue using expression grel:if(contains(value, /^ss  for$/), \"\", \n  if(contains(value, \"greek letter  fraternity or sorority\"), \"\", \n    if(contains(value,  /^other$/), \"\", \n      if(contains(value, /^gov$/), \"government\", value)\n    )\n  )\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "venue",
+    "expression": "grel:if(contains(value, /^steamship$/), \"ship\", \n  if(contains(value, /^naval$/), \"ship\", \n    if(contains(value,  /^other$/), \"\", \n      if(contains(value, /^political$/), \"government\", value)\n    )\n  )\n)",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column venue using expression grel:if(contains(value, /^steamship$/), \"ship\", \n  if(contains(value, /^naval$/), \"ship\", \n    if(contains(value,  /^other$/), \"\", \n      if(contains(value, /^political$/), \"government\", value)\n    )\n  )\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "venue",
+    "expression": "grel:if(contains(value, \"null\"), \"\", value)",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column venue using expression grel:if(contains(value, \"null\"), \"\", value)"
   }
 ]
