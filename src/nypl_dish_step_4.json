@@ -1,0 +1,278 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "menus_appeared",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column menus_appeared using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "times_appeared",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column times_appeared using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "first_appeared",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column first_appeared using expression value.toDate()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "last_appeared",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column last_appeared using expression value.toDate()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "lowest_price",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column lowest_price using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "highest_price",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column highest_price using expression value.toNumber()"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "name",
+          "expression": "isBlank(value)",
+          "columnName": "name",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "lowest_price",
+          "expression": "isBlank(value)",
+          "columnName": "lowest_price",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "lowest_price",
+    "expression": "grel:if(value==null,0.0,value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column lowest_price using expression grel:if(value==null,0.0,value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "highest_price",
+          "expression": "isBlank(value)",
+          "columnName": "highest_price",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "highest_price",
+    "expression": "grel:if(value==null,0.0,value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column highest_price using expression grel:if(value==null,0.0,value)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "times_appeared",
+    "expression": "grel:if(cells[\"menus_appeared\"].value <= cells[\"times_appeared\"].value, \"Y\", \"N\")",
+    "onError": "set-to-blank",
+    "newColumnName": "appeared",
+    "columnInsertIndex": 4,
+    "description": "Create column appeared at index 4 based on column times_appeared using expression grel:if(cells[\"menus_appeared\"].value <= cells[\"times_appeared\"].value, \"Y\", \"N\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "times_appeared",
+    "expression": "grel:if(cells[\"appeared\"].value == \"Y\", cells[\"times_appeared\"].value,cells[\"menus_appeared\"].value)",
+    "onError": "set-to-blank",
+    "newColumnName": "times_appeared_cleaned",
+    "columnInsertIndex": 4,
+    "description": "Create column times_appeared_cleaned at index 4 based on column times_appeared using expression grel:if(cells[\"appeared\"].value == \"Y\", cells[\"times_appeared\"].value,cells[\"menus_appeared\"].value)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "first_appeared",
+    "expression": "grel:if(or(cells[\"first_appeared\"].value == \"1\", cells[\"first_appeared\"].value == \"0\"), \"1851-01-01T00:00:00Z\", cells[\"first_appeared\"].value)",
+    "onError": "set-to-blank",
+    "newColumnName": "first_appeared_cleaned",
+    "columnInsertIndex": 7,
+    "description": "Create column first_appeared_cleaned at index 7 based on column first_appeared using expression grel:if(or(cells[\"first_appeared\"].value == \"1\", cells[\"first_appeared\"].value == \"0\"), \"1851-01-01T00:00:00Z\", cells[\"first_appeared\"].value)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "last_appeared",
+    "expression": "grel:if(or(cells[\"last_appeared\"].value == \"1\", cells[\"last_appeared\"].value == \"0\"), \"2012-01-01T00:00:00Z\", cells[\"last_appeared\"].value)",
+    "onError": "set-to-blank",
+    "newColumnName": "last_appeared_cleaned",
+    "columnInsertIndex": 9,
+    "description": "Create column last_appeared_cleaned at index 9 based on column last_appeared using expression grel:if(or(cells[\"last_appeared\"].value == \"1\", cells[\"last_appeared\"].value == \"0\"), \"2012-01-01T00:00:00Z\", cells[\"last_appeared\"].value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "first_appeared_cleaned",
+    "expression": "grel:if(cells[\"first_appeared_cleaned\"].value == \"2928-01-01T00:00:00Z\".toDate(), \"1851-01-01T00:00:00Z\", cells[\"first_appeared_cleaned\"].value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column first_appeared_cleaned using expression grel:if(cells[\"first_appeared_cleaned\"].value == \"2928-01-01T00:00:00Z\".toDate(), \"1851-01-01T00:00:00Z\", cells[\"first_appeared_cleaned\"].value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "last_appeared_cleaned",
+    "expression": "grel:if(cells[\"last_appeared_cleaned\"].value == \"2928-01-01T00:00:00Z\".toDate(), \"2012-01-01T00:00:00Z\".toDate(), cells[\"last_appeared_cleaned\"].value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column last_appeared_cleaned using expression grel:if(cells[\"last_appeared_cleaned\"].value == \"2928-01-01T00:00:00Z\".toDate(), \"2012-01-01T00:00:00Z\".toDate(), cells[\"last_appeared_cleaned\"].value)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "last_appeared_cleaned",
+    "expression": "grel:diff(cells[\"last_appeared_cleaned\"].value.toDate(), cells[\"first_appeared_cleaned\"].value.toDate(), \"years\")",
+    "onError": "set-to-blank",
+    "newColumnName": "diff_first_last",
+    "columnInsertIndex": 10,
+    "description": "Create column diff_first_last at index 10 based on column last_appeared_cleaned using expression grel:diff(cells[\"last_appeared_cleaned\"].value.toDate(), cells[\"first_appeared_cleaned\"].value.toDate(), \"years\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "highest_price",
+    "expression": "grel:cells[\"highest_price\"].value - cells[\"lowest_price\"].value",
+    "onError": "set-to-blank",
+    "newColumnName": "diff_price",
+    "columnInsertIndex": 13,
+    "description": "Create column diff_price at index 13 based on column highest_price using expression grel:cells[\"highest_price\"].value - cells[\"lowest_price\"].value"
+  }
+]
